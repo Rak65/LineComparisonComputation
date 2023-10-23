@@ -15,6 +15,7 @@ public class LineComparison {
         System.out.println("Enter the value of y2: ");
         double y2=s.nextDouble();
         double dist1=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+        String l1=String.valueOf(dist1);
 
 
         //Distance between two points for line2
@@ -27,11 +28,12 @@ public class LineComparison {
         System.out.println("Enter the value of y4: ");
         double y4=s.nextDouble();
         double dist2=Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
+        String l2 = String.valueOf(dist2);
 
-        if (Double.compare(dist1, dist2) > 0)
+        if (l1.compareTo(l2) > 0)
             System.out.println("The length dist1 is greater than length dist2");
 
-        else if (Double.compare(dist1, dist2) < 0)
+        else if (l1.compareTo(l2) < 0)
             System.out.println("The length dist1 is less than length dist2");
 
         else
